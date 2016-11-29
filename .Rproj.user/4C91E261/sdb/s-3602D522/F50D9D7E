@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "Package: rtrends\nType: Package\nTitle: Analyze Trends of R Packages Based on CRAN Logs\nVersion: 0.1.0\nAuthor: Avi Blinder  <aviblinder@gmail.com>\nMaintainer: Avi Blinder <aviblinder@gmail.com>\nDescription: Analysis of CRAN logs in order to get daily historic data,\n    for a specific package in a range of dates or data of several\n    packages in a range of dates\n    The logs are downloaded from 'http://cran-logs.rstudio.com/'.\nLicense: GPL-2\nLazyData: TRUE\nDepends:\n    R (>= 3.0.2)\nImports:\n    lubridate,\n    dplyr,\n    tidyr\nRoxygenNote: 5.0.1\n",
+    "created" : 1480447477300.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3084443781",
+    "id" : "F50D9D7E",
+    "lastKnownWriteTime" : 1480448358,
+    "last_content_update" : 1480448358844,
+    "path" : "D:/DataScienceProjects/R_Packages/rtrends/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "dcf"
+}

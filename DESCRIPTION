@@ -1,0 +1,19 @@
+Package: rtrends
+Type: Package
+Title: Analyze Trends of R Packages Based on CRAN Logs
+Version: 0.1.0
+Author: Avi Blinder  <aviblinder@gmail.com>
+Maintainer: Avi Blinder <aviblinder@gmail.com>
+Description: Analysis of CRAN logs in order to get daily historic data,
+    for a specific package in a range of dates or data of several
+    packages in a range of dates
+    The logs are downloaded from 'http://cran-logs.rstudio.com/'.
+License: GPL-2
+LazyData: TRUE
+Depends:
+    R (>= 3.0.2)
+Imports:
+    lubridate,
+    dplyr,
+    tidyr
+RoxygenNote: 5.0.1
