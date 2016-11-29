@@ -5,6 +5,10 @@
 #' @param to_date  end date for downloading CRAN Repositories
 #' @param sel_package_name  Single package name for analysis
 #' @export
+#' @examples
+#' cran_stats_by_package('2016-11-01','2016-11-02',"sparklyr")
+
+
 
 cran_stats_by_package <- function(from_date,to_date,sel_package_name){
 

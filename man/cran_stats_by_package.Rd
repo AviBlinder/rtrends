@@ -13,11 +13,11 @@ cran_stats_by_package(from_date, to_date, sel_package_name)
 
 \item{sel_package_name}{Single package name for analysis}
 }
-\value{
-dataframe with log information
-}
 \description{
 Download CRAN data related to several packages in a range of dates
+}
+\examples{
+cran_stats_by_package('2016-11-01','2016-11-02',"sparklyr")
 }
 \author{
 Avi Blinder
