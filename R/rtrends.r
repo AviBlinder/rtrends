@@ -4,22 +4,20 @@
 #' @param from_date  Starting date for downloading CRAN Repositories
 #' @param to_date  end date for downloading CRAN Repositories
 #' @param sel_package_name  Single package name for analysis
+#' @param cran_log CRAN mirror name
 #' @export
-#' @examples
-#' cran_stats_by_package('2016-11-01','2016-11-02',"sparklyr")
 
-
-
-cran_stats_by_package <- function(from_date,to_date,sel_package_name){
+cran_stats_by_package <- function(from_date,to_date,sel_package_name,
+                                  cran_log='http://cran-logs.rstudio.com/'){
 
   ##
   start_date <- lubridate::ymd(from_date)
   end_date <- lubridate::ymd(to_date)
 
   all_days <- seq(start_date, end_date, by = 'day')
-  years <- lubridate::year(all_days)
+  log_years <- lubridate::year(all_days)
 
-  urls <- paste0('http://cran-logs.rstudio.com/', years, '/', all_days, '.csv.gz')
+  urls <- paste0(cran_log, log_years, '/', all_days, '.csv.gz')
 
   package_stats <- c()
   for (i in 1:length(urls)) {
@@ -40,22 +38,26 @@ cran_stats_by_package <- function(from_date,to_date,sel_package_name){
   package_stats
 }
 ######################################################################################
-#' @return A dataframe with log date of a full date
+#' @return A dataframe with complete log data of a specific date
 #' @title CRAN Stats for a specific date
 #' @author Avi Blinder
 #' @description Download a full CRAN Log for a specific date
 #' @param Date date of CRAN log to be downloaded
+#' @param cran_log CRAN mirror name
 #' @export
 #'
+#' @examples
+#' cran_stats_by_day('2016-11-01')
 
-cran_stats_by_day <- function(Date){
+cran_stats_by_day <- function(Date,
+                              cran_log='http://cran-logs.rstudio.com/'){
 
-  start <- lubridate::ymd(Date)
+  log_date <- lubridate::ymd(Date)
 
 
   ##Create regex for package name
-  urls <- paste0('http://cran-logs.rstudio.com/',
-                 lubridate::year(start), '/', start, '.csv.gz')
+  urls <- paste0(cran_log,
+                 lubridate::year(log_date), '/', log_date, '.csv.gz')
 
   package_stats <- c()
   stats_df <- c()
@@ -71,17 +73,19 @@ cran_stats_by_day <- function(Date){
                                         "package_name","package_version","country","ip_id"))
 }
 #######################################################################################
-#' @return dataframe with log information
-#' @title CRAN Stats for several packages
+#' @return dataframe with log information for selected packages
+#' @title CRAN raw data for several packages in a range of dates
 #' @author Avi Blinder
 #' @description Download CRAN log data related to several packages in
 #' a range of dates
 #' @param from_date  Starting date for downloading CRAN Repositories
 #' @param to_date  end date for downloading CRAN Repositories
 #' @param sel_package_name  Single package name for analysis
+#' @param cran_log CRAN mirror name
 #' @export
 #'
-cran_stats_by_packages <- function(from_date,to_date,sel_package_name){
+cran_stats_by_packages <- function(from_date,to_date,sel_package_name,
+                                   cran_log='http://cran-logs.rstudio.com/'){
 
 
   ##
@@ -89,9 +93,9 @@ cran_stats_by_packages <- function(from_date,to_date,sel_package_name){
   end_date <- lubridate::ymd(to_date)
 
   all_days <- seq(start_date, end_date, by = 'day')
-  years <- lubridate::year(all_days)
+  log_years <- lubridate::year(all_days)
 
-  urls <- paste0('http://cran-logs.rstudio.com/', years, '/', all_days, '.csv.gz')
+  urls <- paste0(cran_log, log_years, '/', all_days, '.csv.gz')
 
   package_stats <- c()
   for (i in 1:length(urls)) {

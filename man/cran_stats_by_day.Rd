@@ -4,16 +4,21 @@
 \alias{cran_stats_by_day}
 \title{CRAN Stats for a specific date}
 \usage{
-cran_stats_by_day(Date)
+cran_stats_by_day(Date, cran_log = "http://cran-logs.rstudio.com/")
 }
 \arguments{
 \item{Date}{date of CRAN log to be downloaded}
+
+\item{cran_log}{CRAN mirror name}
 }
 \value{
-A dataframe with log date of a full date
+A dataframe with complete log data of a specific date
 }
 \description{
 Download a full CRAN Log for a specific date
+}
+\examples{
+cran_stats_by_day('2016-11-01')
 }
 \author{
 Avi Blinder

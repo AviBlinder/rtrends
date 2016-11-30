@@ -2,9 +2,10 @@
 % Please edit documentation in R/rtrends.r
 \name{cran_stats_by_packages}
 \alias{cran_stats_by_packages}
-\title{CRAN Stats for several packages}
+\title{CRAN raw data for several packages in a range of dates}
 \usage{
-cran_stats_by_packages(from_date, to_date, sel_package_name)
+cran_stats_by_packages(from_date, to_date, sel_package_name,
+  cran_log = "http://cran-logs.rstudio.com/")
 }
 \arguments{
 \item{from_date}{Starting date for downloading CRAN Repositories}
@@ -12,9 +13,11 @@ cran_stats_by_packages(from_date, to_date, sel_package_name)
 \item{to_date}{end date for downloading CRAN Repositories}
 
 \item{sel_package_name}{Single package name for analysis}
+
+\item{cran_log}{CRAN mirror name}
 }
 \value{
-dataframe with log information
+dataframe with log information for selected packages
 }
 \description{
 Download CRAN log data related to several packages in
