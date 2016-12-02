@@ -1,7 +1,15 @@
-#' @title CRAN Stats for single package
+#' @title Merge stats with County names
 #' @author Avi Blinder
-#' @description Download CRAN data related to several packages in a range of dates
-#' @param log_name  Starting date for downloading CRAN Repositories
-#' @export
+#' @description Merge CRAN log data with County names
+#' @param cran_log  dataftame containing CRAN log data
 #' data(sample_log)
-#' run_models(ros1_ts)
+#' cran_summary(sample_log)
+#' @export
+
+cran_summary <- function(cran_log){
+  data(countries)
+  multiple_pack_Stats_full <- merge(packages_stats,countries,by.x = "country",by.y="country_iso_code")
+
+}
+
+
