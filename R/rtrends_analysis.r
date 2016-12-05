@@ -8,8 +8,7 @@
 
 cran_summary <- function(cran_log){
   data(countries)
-  multiple_pack_Stats_full <- merge(packages_stats,countries,by.x = "country",by.y="country_iso_code")
+  multiple_pack_Stats_full <- merge(cran_log,countries,by.x = "country",by.y="country_iso_code")
 
 }
-
 
