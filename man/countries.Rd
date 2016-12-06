@@ -18,7 +18,6 @@
   country_name Full: country name - factor
 
 }
-\details{}
 \source{"http://dev.maxmind.com/geoip/geoip2/geolite2/"}
 \examples{
 data(countries)

@@ -4,12 +4,15 @@
 \alias{cran_summary}
 \title{Merge stats with County names}
 \usage{
-cran_summary(cran_log)
+cran_summary(cran_log, countries)
 }
 \arguments{
-\item{cran_log}{dataftame containing CRAN log data
+\item{cran_log}{dataftame containing CRAN log data}
+
+\item{countries}{Countries lookup table
 data(sample_log)
-cran_summary(sample_log)}
+data(countries)
+cran_summary(sample_log,countries)}
 }
 \description{
 Merge CRAN log data with County names
