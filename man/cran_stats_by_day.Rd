@@ -17,9 +17,6 @@ A dataframe with complete log data of a specific date
 \description{
 Download a full CRAN Log for a specific date
 }
-\examples{
-cran_stats_by_day('2016-11-01')
-}
 \author{
 Avi Blinder
 }

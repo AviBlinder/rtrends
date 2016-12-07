@@ -6,7 +6,7 @@ Author: Avi Blinder  <aviblinder@gmail.com>
 Maintainer: Avi Blinder <aviblinder@gmail.com>
 Description: Analysis of CRAN logs in order to get daily historic data,
     for a specific package in a range of dates or data of several
-    packages in a range of dates
+    packages in a range of dates.
     The downloads logs are currently taken from <http://cran-logs.rstudio.com/>.
 License: GPL-2
 LazyData: TRUE
